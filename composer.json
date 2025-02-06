@@ -1,5 +1,5 @@
 {
-    "name": "jaytaph/typearray",
+    "name": "minvws/icore-php-typearray",
     "description": "Typed Array",
     "type": "library",
     "require": {
