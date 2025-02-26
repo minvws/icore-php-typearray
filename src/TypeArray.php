@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Jaytaph\TypeArray;
+namespace MinVWS\TypeArray;
 
-use Jaytaph\TypeArray\Exception\IncorrectDataTypeException;
-use Jaytaph\TypeArray\Exception\InvalidIndexException;
+use MinVWS\TypeArray\Exception\IncorrectDataTypeException;
+use MinVWS\TypeArray\Exception\InvalidIndexException;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
 
