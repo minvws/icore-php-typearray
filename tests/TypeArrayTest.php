@@ -225,7 +225,7 @@ class TypeArrayTest extends TestCase
         $this->assertEquals('bar', $retVals[0]);
         $this->assertEquals(1, $retVals[1]);
         $this->assertEquals(false, $retVals[2]);
-        $this->assertIsArray($retVals[3]);
+        $this->assertInstanceOf(TypeArray::class, $retVals[3]);
     }
 
     protected function createTypeArray(): TypeArray
