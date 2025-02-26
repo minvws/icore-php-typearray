@@ -3,5 +3,4 @@ parameters:
         - src
     level: 8
     inferPrivatePropertyTypeFromConstructor: true
-    checkMissingIterableValueType: false
     reportUnmatchedIgnoredErrors: false
