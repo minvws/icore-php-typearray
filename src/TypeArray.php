@@ -231,6 +231,9 @@ class TypeArray implements \JsonSerializable
         return $this->data;
     }
 
+    /**
+     * @return iterable<string, mixed>
+     */
     public function getIterable(string $path): iterable
     {
         $data = $this->propertyAccessor->getValue($this->data, $path);
