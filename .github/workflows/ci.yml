@@ -34,6 +34,9 @@ jobs:
       with:
         coverage: none
 
+    - name: Install optional dependency doctrine/dbal
+      run: composer require doctrine/dbal
+
     - name: Run PHPStan
       run: vendor/bin/phpstan analyse
 
