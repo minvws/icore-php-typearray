@@ -17,7 +17,7 @@
     "license": "BSD-3-Clause",
     "autoload": {
         "psr-4": {
-            "Jaytaph\\TypeArray\\": "src/"
+            "MinVWS\\TypeArray\\": "src/"
         }
     },
     "authors": [

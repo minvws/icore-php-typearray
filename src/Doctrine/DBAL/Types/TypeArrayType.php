@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jaytaph\TypeArray\Doctrine\DBAL\Types;
+namespace MinVWS\TypeArray\Doctrine\DBAL\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Exception\InvalidType;
@@ -11,7 +11,7 @@ use Doctrine\DBAL\Types\Exception\ValueNotConvertible;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\Deprecations\Deprecation;
 use JsonException;
-use Jaytaph\TypeArray\TypeArray;
+use MinVWS\TypeArray\TypeArray;
 
 use function is_resource;
 use function json_encode;

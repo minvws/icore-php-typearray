@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jaytaph\TypeArray\Exception;
+namespace MinVWS\TypeArray\Exception;
 
 class IncorrectDataTypeException extends \Exception
 {

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Jaytaph\TypeArray\Exception\IncorrectDataTypeException;
-use Jaytaph\TypeArray\Exception\InvalidIndexException;
-use Jaytaph\TypeArray\TypeArray;
+use MinVWS\TypeArray\Exception\IncorrectDataTypeException;
+use MinVWS\TypeArray\Exception\InvalidIndexException;
+use MinVWS\TypeArray\TypeArray;
 use PHPUnit\Framework\TestCase;
 
 class TypeArrayTest extends TestCase
