@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-24.04
+    name: PHPCS
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup
+      uses: ./.github/actions/setup
+      with:
+        coverage: none
+
+    - name: Run PHPCS
+      run: vendor/bin/phpcs 
+
+  phpstan:
+    runs-on: ubuntu-24.04
+    name: PHPStan
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup
+      uses: ./.github/actions/setup
+      with:
+        coverage: none
+
+    - name: Install optional dependency doctrine/dbal
+      run: composer require doctrine/dbal
+
+    - name: Run PHPStan
+      run: vendor/bin/phpstan analyse
+
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      max-parallel: 3
+      matrix:
+        php-version: [ 8.2, 8.3 ]
+        composer-flags: [ "", "--prefer-lowest" ]
+    name: Test on PHP ${{ matrix.php-version }} ${{ matrix.composer-flags }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup
+      uses: ./.github/actions/setup
+      with:
+        php-version: ${{ matrix.php-version }}
+        composer-flags: ${{ matrix.composer-flags }}
+
+    - name: Run tests (Unit and Feature)
+      run: vendor/bin/phpunit --coverage-text
