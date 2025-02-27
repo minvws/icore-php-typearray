@@ -21,7 +21,13 @@ class TypeArrayTest extends TestCase
         $this->assertEquals('def', $typeArray->getString('[level0.4][not-exists]', 'def'));
         $this->assertEquals('bar', $typeArray->getString('[level0.4][level1.1]', 'def'));
 
-        $a = new TypeArray(['level2.1' => 'baz', 'level2.2' => 2, 'level2.3' => true, 'level2.5' => null, 'level2.6' => 1.5335]);
+        $a = new TypeArray([
+            'level2.1' => 'baz',
+            'level2.2' => 2,
+            'level2.3' => true,
+            'level2.5' => null,
+            'level2.6' => 1.5335
+        ]);
         $b = new TypeArray(['foo', 'bar']);
         $this->assertEquals($a, $typeArray->getTypeArray('[level0.4][not-exists]', $a));
         $this->assertEquals($a, $typeArray->getTypeArray('[level0.4][level1.4]', $b));
