@@ -12,7 +12,7 @@ jobs:
     name: PHPCS
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: Setup
       uses: ./.github/actions/setup
@@ -27,7 +27,7 @@ jobs:
     name: PHPStan
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: Setup
       uses: ./.github/actions/setup
@@ -50,7 +50,7 @@ jobs:
     name: Test on PHP ${{ matrix.php-version }} ${{ matrix.composer-flags }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: Setup
       uses: ./.github/actions/setup
